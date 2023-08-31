@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  Rides
+
+  Created by Sameh Farouk on 31/08/2023.
+  
+*/
+
+"Vehicles" = "Véhicules";
+"Search"= "Recherche";
+"Search results" = "Résultats de recherche";
+"Error" = "Erreur";
+"No internet connection" = "Pas de connexion Internet";
+"Failed loading vehicles" = "Échec du chargement des véhicules";
+"Number of vehicles" = "Nombre de véhicules";
+"VIN" = "VIN";
+"Make & Model" = "Marque et modèle";
+"Color" = "Couleur";
+"Car Type" = "Type de voiture";
+
