@@ -78,6 +78,12 @@ final class DefaultVehiclesListViewModel: VehiclesListViewModel {
     private func load(vehicleQuery: VehicleQuery, loading: VehiclesListViewModelLoading) {
         self.loading.value = loading
         query.value = vehicleQuery.size
+        
+        guard isVehicleQueryValidate(vehicleQuery) else {
+            self.error.value = NSLocalizedString("Number of vehicle should be at least 1 and mot more than 100", comment: "")
+            self.loading.value = .none
+            return
+        }
 
         vehiclesLoadTask = searchVehiclesUseCase.execute(
             requestValue: .init(query: vehicleQuery),
@@ -107,7 +113,17 @@ final class DefaultVehiclesListViewModel: VehiclesListViewModel {
     }
 
     private func update(vehicleQuery: VehicleQuery) {
+        resetPage()
         load(vehicleQuery: vehicleQuery, loading: .fullScreen)
+    }
+    
+    private func resetPage() {
+        page = nil
+        items.value.removeAll()
+    }
+    
+    private func isVehicleQueryValidate(_ query: VehicleQuery) -> Bool {
+        query.size > 0 && query.size <= 100
     }
 }
 

@@ -17,3 +17,4 @@
 "Make & Model" = "Make & Model";
 "Color" = "Color";
 "Car Type" = "Car Type";
+"Number of vehicle should be at least 1 and mot more than 100" = "Number of vehicle should be at least 1 and mot more than 100";

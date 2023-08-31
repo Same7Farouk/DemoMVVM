@@ -43,6 +43,9 @@ final class VehiclesListViewController: UIViewController, StoryboardInstantiable
         sizeTextField.placeholder = viewModel.searchBarPlaceholder
         searchButton.setTitle(viewModel.searchCtaTitle, for: .normal)
         emptyDataLabel.text = viewModel.emptyDataTitle
+        if #available(iOS 13.0, *) {
+            sizeTextField.accessibilityIdentifier = AccessibilityIdentifier.searchField
+        }
     }
     
     private func bind(to viewModel: VehiclesListViewModel) {

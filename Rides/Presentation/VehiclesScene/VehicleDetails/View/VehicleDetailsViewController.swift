@@ -44,6 +44,7 @@ final class VehicleDetailsViewController: UIViewController, StoryboardInstantiab
         colorValueLabel.text = viewModel.color
         carTypeTitleLabel.text = viewModel.carTypeTitle
         carTypeValueLabel.text = viewModel.carType
+        view.accessibilityIdentifier = AccessibilityIdentifier.vehicleDetailsView
     }
 
 }

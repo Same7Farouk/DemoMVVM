@@ -17,4 +17,5 @@
 "Make & Model" = "Marque et modèle";
 "Color" = "Couleur";
 "Car Type" = "Type de voiture";
+"Number of vehicle should be at least 1 and mot more than 100" = "Le nombre de véhicules doit être d'au moins 1 et le mot supérieur à 100";
 
